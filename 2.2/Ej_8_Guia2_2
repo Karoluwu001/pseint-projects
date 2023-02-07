@@ -1,0 +1,49 @@
+Algoritmo Ejercicio2Repetitivos
+	definir  cont,i como entero
+	definir notaMayor, cantidadAl, alumnoRepro, totalAlumnosParcial como entero
+	definir promedio, alumnoIntegrado, notaFinal, expo, parc, integ, nota1, nota2, nota3 Como Real
+     escribir "cuantos alumnos tienes?"
+	leer cantidadAl
+	expo = 0.25
+	integ = 0.35
+	parc = 0.4
+	notaFinal = 0
+	alumnoRepro = 0
+	totalAlumnosParcial = 0
+	cont = 0
+	notaMayor = 0
+	alumnoIntegrado = 0
+	
+	
+	para i = 0 hasta cantidadAl-1 con paso 1 Hacer
+		escribir "nota trabajo practico"
+		leer nota1
+		escribir "nota expo"
+		leer nota2
+		escribir "nota parcial"
+		leer nota3
+		si cont = 0 Entonces
+		notaMayor = nota2
+		FinSi
+		
+		notaFinal = (nota1* integ) + (nota2 * expo) + (nota3 * parc)
+		Si notaFinal < 6.5 Entonces
+			alumnoRepro = alumnoRepro + 1
+	
+		FinSi
+		Si nota1 >= 7.5 Entonces
+			alumnoIntegrado = alumnoIntegrado + 1
+		FinSi
+		Si nota2 > notaMayor Entonces
+			notaMayor = nota2
+		FinSi
+		si nota3 >= 4.0 Y nota3 <= 7.5 Entonces
+			totalAlumnosParcial = totalAlumnosParcial + 1
+		FinSi
+		
+	FinPara
+	escribir "la cantidad de alumnos reprobados es " alumnoRepro
+	escribir "la cantidad de alumnos que aprobaron el practico es " alumnoIntegrado
+	escribir "la mejor nota de expo fue de " notaMayor
+	escribir "la cantidad de alumnos con nota entre 4 y 7.5 en el parcial es de" totalAlumnosParcial
+FinAlgoritmo

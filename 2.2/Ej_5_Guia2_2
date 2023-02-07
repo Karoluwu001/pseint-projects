@@ -1,0 +1,30 @@
+Algoritmo GUIA22EJ5
+	definir num,max,min,cant,suma Como Entero
+	num=0
+	max=0
+	min=0
+	cant=0
+	suma=0
+	
+	Hacer
+		Escribir "ingrese un numero entero"
+		leer num
+		cant=cant+1
+		suma=suma+num
+		
+		si cant=1 Entonces
+			min=num
+			max=num
+		SiNo
+			si num>max Entonces
+				max=num
+			SiNo
+				si num<min y num>0 entonces
+					min=num
+				FinSi
+				
+			FinSi
+		FinSi
+	Mientras Que num<>0
+	Escribir "el numero maximo es " max ", el minimo es " min ", y el promedio es " suma/(cant-1) "."
+FinAlgoritmo
